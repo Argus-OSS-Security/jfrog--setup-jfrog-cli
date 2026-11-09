@@ -3,15 +3,16 @@
 # create a DRAFT release vX.Y.Z with generated notes. A human then opens the draft,
 # ticks "Publish this Action to the GitHub Marketplace" and clicks Publish (v4 first, then v5).
 name: Draft release
-on:
-  push:
-    branches:
-      - master
-      - "preRelease/jfrog-setup-cli-v4.*"
-    paths:
-      - package.json
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - master
+#       - "preRelease/jfrog-setup-cli-v4.*"
+#     paths:
+#       - package.json
+#   workflow_dispatch:
+# 
 permissions:
   contents: write
 

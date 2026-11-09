@@ -1,7 +1,8 @@
 name: "Frogbot Scan Pull Request"
-on:
-  pull_request_target:
-    types: [ opened, synchronize ]
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [ opened, synchronize ]
 permissions:
   pull-requests: write
   contents: read

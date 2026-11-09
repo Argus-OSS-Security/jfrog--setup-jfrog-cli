@@ -1,8 +1,9 @@
 name: Remove Label
-on:
-  pull_request_target:
-    types: [labeled]
-# Ensures that only the latest commit is running for each PR at a time.
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [labeled]
+# # Ensures that only the latest commit is running for each PR at a time.
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}-${{ github.ref }}
   cancel-in-progress: true

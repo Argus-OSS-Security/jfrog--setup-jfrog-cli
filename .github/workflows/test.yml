@@ -1,11 +1,12 @@
 name: "Test"
-on:
-  push:
-    branches:
-      - '**'
-    tags-ignore:
-      - '**'
-  pull_request:
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - '**'
+#     tags-ignore:
+#       - '**'
+#   pull_request:
 jobs:
   test:
     name: Test (${{ matrix.os }}) - (CLI ${{ matrix.cli-version || 'default' }})

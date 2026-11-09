@@ -3,15 +3,16 @@
 #   1. master (v5 line):                      action.yml default + patch bump of package(-lock).json
 #   2. preRelease/jfrog-setup-cli-v4.N.x (v4): action.yml default + minor bump of package(-lock).json
 name: Bump default JFrog CLI version
-on:
-  repository_dispatch:
-    types: [cli-released] # sent by jfrog/jfrog-cli after a release is published
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "JFrog CLI version to set as default (X.Y.Z)"
-        required: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   repository_dispatch:
+#     types: [cli-released] # sent by jfrog/jfrog-cli after a release is published
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: "JFrog CLI version to set as default (X.Y.Z)"
+#         required: true
+# 
 permissions:
   contents: write
   pull-requests: write

@@ -1,8 +1,9 @@
 name: "Release"
-on:
-  release:
-    types: [published]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   release:
+#     types: [published]
+# 
 permissions:
   contents: write
 
